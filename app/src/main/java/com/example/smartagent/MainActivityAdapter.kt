@@ -51,7 +51,7 @@ class MainActivityAdapter(
                 Picasso.with(context).load(demolist[position].cdnpath).placeholder(R.drawable.placeholder)
                     .into(itemView.image)
             }else if (demolist[position].type.equals("VIDEO")){
-                
+
             }
 
 
