@@ -1,0 +1,73 @@
+apply plugin: 'com.android.application'
+
+apply plugin: 'kotlin-android'
+
+apply plugin: 'kotlin-android-extensions'
+
+apply plugin: 'kotlin-kapt'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "com.example.smartagent"
+        minSdkVersion 15
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+    implementation 'androidx.appcompat:appcompat:1.0.0-beta01'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'androidx.core:core-ktx:1.1.0-alpha05'
+    implementation 'androidx.constraintlayout:constraintlayout:1.1.3'
+    implementation 'com.google.firebase:firebase-core:16.0.3'
+    implementation 'com.google.firebase:firebase-messaging:17.3.2'
+    implementation 'com.google.firebase:firebase-config:16.0.0'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.1.0-alpha4'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.1.0-alpha4'
+    implementation 'com.android.support:design:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'it.sephiroth.android.library.bottomnavigation:bottom-navigation:2.0.1-rc1'
+    implementation 'com.squareup.picasso:picasso:2.5.2'
+//    // The additional dependencies
+//    kapt 'com.google.dagger:dagger-android-processor:2.11'
+//    kapt 'com.github.hotchemi:permissionsdispatcher-processor:3.0.1'
+//    kapt 'org.parceler:parceler:1.1.11'
+
+    implementation 'org.jetbrains.anko:anko:0.10.8'
+    // implementation 'com.github.jkcclemens:khttp:0.1.0'
+    implementation "io.karn:khttp-android:0.1.0"
+    implementation "com.github.vicpinm:krealmextensions:2.5.0"
+    implementation 'io.realm:android-adapters:3.1.0'
+    implementation 'com.jjoe64:graphview:4.2.2'
+    implementation 'com.google.firebase:firebase-core:16.0.7'
+    implementation 'com.google.firebase:firebase-storage:16.1.0'
+    implementation 'com.google.firebase:firebase-auth:16.1.0'
+    implementation 'com.google.firebase:firebase-database:16.1.0'
+    implementation 'com.google.firebase:firebase-config:16.3.0'
+    implementation 'com.google.firebase:firebase-messaging:17.4.0'
+    implementation 'com.google.firebase:firebase-inappmessaging-display:17.1.0'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation 'me.dm7.barcodescanner:zxing:1.9'
+    implementation 'com.github.rubensousa:gravitysnaphelper:1.5'
+    implementation 'com.kaopiz:kprogresshud:1.2.0'
+    implementation 'com.jsibbold:zoomage:1.2.0'
+    implementation 'com.google.zxing:core:3.3.0'
+    implementation 'com.github.PhilJay:MPAndroidChart:v2.2.4'
+//    implementation 'com.github.PhilJay:MPAndroidChart:v3.1.0'
+    implementation 'com.seatgeek:placesautocomplete:0.2-SNAPSHOT'
+    implementation 'com.facebook.android:facebook-android-sdk:4.26.0'
+}
