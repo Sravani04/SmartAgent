@@ -39,6 +39,12 @@ class MainActivityAdapter(
         fun bind(position: Int) {
             itemView.title.text = demolist.get(position).name
             itemView.bytes.text = demolist[position].sizeInBytes
+
+            if (demolist[position].cdnpath.isEmpty()){
+                itemView.image.visibility = View.GONE
+                itemView.videoView.visibility = View.GONE
+            }
+            
             if (demolist[position].type.equals("IMAGE")){
                 Picasso.with(context).load(demolist[position].cdnpath).placeholder(R.drawable.placeholder)
                     .into(itemView.image)
