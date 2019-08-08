@@ -44,7 +44,7 @@ class MainActivityAdapter(
                 itemView.image.visibility = View.GONE
                 itemView.videoView.visibility = View.GONE
             }
-            
+
             if (demolist[position].type.equals("IMAGE")){
                 Picasso.with(context).load(demolist[position].cdnpath).placeholder(R.drawable.placeholder)
                     .into(itemView.image)
